@@ -1,7 +1,7 @@
 //App.js
 
 import React, { useState } from "react";
-import "./App.css";
+import "./styles.css";
 import SearchComponent from "./components/SearchComponent";
 import ShowCourseComponent from "./components/ShowCourseComponent";
 import UserCartComponent from "./components/UserCartComponent";
@@ -11,21 +11,21 @@ function App() {
   const [courses, setCourses] = useState([
     {
       id: 1,
-      name: "GFG T-shirt",
+      name: "XYZ T-shirt",
       price: 499,
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20230823165506/gfg1.png",
     },
     {
       id: 2,
-      name: "GFG Bag",
+      name: "ABC Bag",
       price: 699,
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20230823165553/gfg2.jpg",
     },
     {
       id: 3,
-      name: "GFG Hoodie",
+      name: "DEF Hoodie",
       price: 799,
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20230823165623/gfg3.jpg",
