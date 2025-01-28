@@ -5,7 +5,7 @@ import "./App.css";
 import SearchComponent from "./components/SearchComponent";
 import ShowCourseComponent from "./components/ShowCourseComponent";
 import UserCartComponent from "./components/UserCartComponent";
-import { Course } from "./types";
+import { CartCourses, Course, InputOnChange } from "./types";
 
 function App() {
   const [courses, setCourses] = useState([
@@ -32,7 +32,7 @@ function App() {
     },
   ]);
 
-  const [cartCourses, setCartCourses] = useState([]);
+  const [cartCourses, setCartCourses] = useState<CartCourses>([]);
   const [searchCourse, setSearchCourse] = useState("");
 
   const addCourseToCartFunction = (GFGcourse: Course) => {
@@ -68,7 +68,7 @@ function App() {
     );
   };
 
-  const courseSearchUserFunction = (event) => {
+  const courseSearchUserFunction: InputOnChange = (event) => {
     setSearchCourse(event.target.value);
   };
 
@@ -84,7 +84,6 @@ function App() {
       />
       <main className="App-main">
         <ShowCourseComponent
-          courses={courses}
           filterCourseFunction={filterCourseFunction}
           addCourseToCartFunction={addCourseToCartFunction}
         />

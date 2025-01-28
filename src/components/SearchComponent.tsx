@@ -1,7 +1,9 @@
+import { InputOnChange } from "../types";
+
 //components/SearchComponent.js
 type SearchComponentProps = {
   searchCourse: string;
-  courseSearchUserFunction: () => void;
+  courseSearchUserFunction: InputOnChange;
 };
 
 const SearchComponent = ({
